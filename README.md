@@ -17,3 +17,5 @@ If you are developing a production application, we recommend using TypeScript an
 - npm i react-router
 - npm install @mui/material @emotion/react @emotion/styled
 - npm install @mui/icons-material
+- npm install @reduxjs/toolkit react-redux
+- npm install firebase
