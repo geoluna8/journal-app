@@ -19,3 +19,4 @@ If you are developing a production application, we recommend using TypeScript an
 - npm install @mui/icons-material
 - npm install @reduxjs/toolkit react-redux
 - npm install firebase
+- npm install sweetalert2
