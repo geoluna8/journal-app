@@ -20,3 +20,27 @@ If you are developing a production application, we recommend using TypeScript an
 - npm install @reduxjs/toolkit react-redux
 - npm install firebase
 - npm install sweetalert2
+
+- testing
+    - npm install --dev jest babel-jest @babel/preset-env @babel/preset-react
+    - npm install --dev @testing-library/react @types/jest jest-environment-jsdom
+    - npm install --dev whatwg-fetch
+    - package.json => "scripts: { ... "test": "jest --watchAll"
+    - Crear archivo babel.config.js 
+        - export default { 
+                presets: [ 
+                    [ '@babel/preset-env', { targets: { esmodules: true } } ], 
+                    [ '@babel/preset-react', { runtime: 'automatic' } ], 
+                ], 
+            };
+    - Crear archivo jest.config.js 
+        - export default { 
+                testEnvironment: 'jest-environment-jsdom', 
+                setupFiles: ['./jest.setup.js'] 
+            }
+    - Crear archivo jest.setup.js En caso de necesitar la implementación del FetchAPI 
+        - import 'whatwg-fetch'; <-- npm install --dev whatwg-fetch
+    - npm install -D cloudinary
+        - La bandera -D indica que solo es dependencia de desarrollo y no es parte de la aplicación
+        - npm install -D setimmidiate y import 'setimmidiate' en jest.setup.js
+    - npm install -D dotenv
